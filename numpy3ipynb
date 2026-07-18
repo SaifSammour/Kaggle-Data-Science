@@ -1,0 +1,534 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "gpuType": "T4",
+      "authorship_tag": "ABX9TyMxeeHCtx53vM5EdMZ4cb7n",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/SaifSammour/Kaggle-Data-Science/blob/main/numpy3ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q1\n"
+      ],
+      "metadata": {
+        "id": "uL5VhkgCeIjU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "rray=np.array([10, 20, 30, 40, 50])\n",
+        "print(rray)\n"
+      ],
+      "metadata": {
+        "id": "z7mcILTreMkV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q2"
+      ],
+      "metadata": {
+        "id": "DwBzClWDeNYI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "rrey=np.arange(1,20)\n",
+        "print(rrey)\n",
+        "first =rrey[0]\n",
+        "print(\"first:\",first)\n",
+        "last=rrey[-1]\n",
+        "print(\"last\",last)\n",
+        "index_five=rrey[5]\n",
+        "print(\"index_five :\",index_five)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MTz4D-lKePev",
+        "outputId": "01416b55-c518-44d2-b57d-a3068f57bf1f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]\n",
+            "first: 1\n",
+            "last 19\n",
+            "index_five : 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q3\n"
+      ],
+      "metadata": {
+        "id": "561J8Xajfzky"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr=np.array([1,2,3,4,5,6,7,8,9])\n",
+        "print(rrey)\n",
+        "shape = np.reshape(arr, (3,3))\n",
+        "print(\"shape :\",shape)\n",
+        "second_row=np.array(shape[1])\n",
+        "print(\"second_row :\",second_row)\n",
+        "third_column=np.array(shape[:,2])\n",
+        "print(\"third_column :\",third_column)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6J-iquCNf05L",
+        "outputId": "42ab9fa1-a9e3-43ac-bcbd-edb332fa35f7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1 2 3 4 5 6 7 8]\n",
+            "shape : [[1 2 3]\n",
+            " [4 5 6]\n",
+            " [7 8 9]]\n",
+            "second_row : [4 5 6]\n",
+            "third_column : [3 6 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q4"
+      ],
+      "metadata": {
+        "id": "tI6JCopPhsWB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "zero=np.zeros((5,2))\n",
+        "print(\"Zeros :\",zero)\n",
+        "one=np.ones((5,2))\n",
+        "print(\"Ones:\",one)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FLbxoHckhtvr",
+        "outputId": "11c899ff-fcc0-41ea-82de-5d2a291c6f27"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Zeros : [[0. 0.]\n",
+            " [0. 0.]\n",
+            " [0. 0.]\n",
+            " [0. 0.]\n",
+            " [0. 0.]]\n",
+            "Ones: [[1. 1.]\n",
+            " [1. 1.]\n",
+            " [1. 1.]\n",
+            " [1. 1.]\n",
+            " [1. 1.]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q5"
+      ],
+      "metadata": {
+        "id": "el9J1hdviavB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr=np.arange(10,101,10)\n",
+        "print(\"The Array\",arr)\n",
+        "print(\"Sum :\",arr.sum())\n",
+        "print(\"Mean :\",arr.mean())\n",
+        "print(\"Max\",arr.max())\n",
+        "print(\"Min\",arr.min())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nknUnSsCibmI",
+        "outputId": "fe3c520d-2e8e-4b8f-f0c4-6cf4c74b467e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Array [ 10  20  30  40  50  60  70  80  90 100]\n",
+            "Sum : 550\n",
+            "Mean : 55.0\n",
+            "Max 100\n",
+            "Min 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q6"
+      ],
+      "metadata": {
+        "id": "0fZm1a9qkGQt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr = np.random.randint(1, 101, 15)\n",
+        "print(\"The Array\",arr)\n",
+        "sorted=np.sort(arr)\n",
+        "print (\"The Sorted :\",sorted)\n",
+        "print(\"Min :\",arr.min())\n",
+        "print(\"Max :\",arr.max())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TODiukKTkIZT",
+        "outputId": "45bb17c0-a974-445d-f030-c0a34d259ded"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Array [75 63 47 68 19 49 19 50 88 40 67 42 41  9 54]\n",
+            "The Sorted : [ 9 19 19 40 41 42 47 49 50 54 63 67 68 75 88]\n",
+            "Min : 9\n",
+            "Max : 88\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q7"
+      ],
+      "metadata": {
+        "id": "nwkIh5m0om-8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "A = np.array([1, 2, 3, 4, 5])\n",
+        "B = np.array([6, 7, 8, 9, 10])\n",
+        "\n",
+        "print(\"A:\", A)\n",
+        "print(\"B:\", B)\n",
+        "\n",
+        "print(\"Addition       :\", A + B)\n",
+        "print(\"Subtraction    :\", A - B)\n",
+        "print(\"Multiplication :\", A * B)\n",
+        "print(\"Division       :\", A / B)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dOln3dhuooHI",
+        "outputId": "7058cec9-e3b8-4f3e-8dd1-992558a86f99"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A: [1 2 3 4 5]\n",
+            "B: [ 6  7  8  9 10]\n",
+            "Addition       : [ 7  9 11 13 15]\n",
+            "Subtraction    : [-5 -5 -5 -5 -5]\n",
+            "Multiplication : [ 6 14 24 36 50]\n",
+            "Division       : [0.16666667 0.28571429 0.375      0.44444444 0.5       ]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q8"
+      ],
+      "metadata": {
+        "id": "3Jyw9fhqpQGN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "\n",
+        "\n",
+        "mat = np.array([[1, 2, 3],\n",
+        "                [4, 5, 6],\n",
+        "                [7, 8, 9]])\n",
+        "\n",
+        "print(\"Matrix:\", mat)\n",
+        "\n",
+        "print(\"First two rows:\", mat[:2])\n",
+        "\n",
+        "print(\"Last two columns:\", mat[:, 1:])\n",
+        "\n",
+        "print(\"Center element:\", mat[1, 1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hPd5H8pJpRkG",
+        "outputId": "f01327ae-ba8f-43fa-99dd-c16d27a617a9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matrix:\n",
+            " [[1 2 3]\n",
+            " [4 5 6]\n",
+            " [7 8 9]]\n",
+            "\n",
+            "First two rows:\n",
+            " [[1 2 3]\n",
+            " [4 5 6]]\n",
+            "\n",
+            "Last two columns:\n",
+            " [[2 3]\n",
+            " [5 6]\n",
+            " [8 9]]\n",
+            "\n",
+            "Center element: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q9"
+      ],
+      "metadata": {
+        "id": "l-oaH08rpx8E"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr=np.arange(1,20)\n",
+        "print(\"Array:\",arr)\n",
+        "even_numbers=arr[arr%2==0]\n",
+        "print(\"Even numbers:\",even_numbers)\n",
+        "odd_numbers=arr[arr%2!=0]\n",
+        "print(\"Odd numbers:\",odd_numbers)\n",
+        "print(\"Greater than 10:\",arr[arr>10])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0QElZQRTpzCZ",
+        "outputId": "f3c81353-18f7-465c-feed-205a4a6a5601"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Array: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]\n",
+            "Even numbers: [ 2  4  6  8 10 12 14 16 18]\n",
+            "Odd numbers: [ 1  3  5  7  9 11 13 15 17 19]\n",
+            "Greater than 10: [11 12 13 14 15 16 17 18 19]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q10"
+      ],
+      "metadata": {
+        "id": "ng6nqKj5q1W2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "\n",
+        "mat = np.random.randint(1, 10, (4, 4))\n",
+        "\n",
+        "print(\"Matrix:\", mat)\n",
+        "\n",
+        "print(\"Shape:\", mat.shape)\n",
+        "\n",
+        "print(\"Transpose:\", mat.T)\n",
+        "\n",
+        "print(\"Row sums:\", mat.sum(axis=1))\n",
+        "\n",
+        "print(\"Column sums:\", mat.sum(axis=0))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lg_gxiDCq2jX",
+        "outputId": "b1e1bfeb-f4a1-4828-ef8f-97560b70e04b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Matrix: [[7 8 5 7]\n",
+            " [3 7 2 7]\n",
+            " [9 2 2 9]\n",
+            " [6 5 6 2]]\n",
+            "Shape: (4, 4)\n",
+            "Transpose: [[7 3 9 6]\n",
+            " [8 7 2 5]\n",
+            " [5 2 2 6]\n",
+            " [7 7 9 2]]\n",
+            "Row sums: [27 19 22 19]\n",
+            "Column sums: [25 22 15 25]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Bonus Question"
+      ],
+      "metadata": {
+        "id": "DSerXuoNrm0e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "\n",
+        "arr = np.random.randint(1, 101, 20)\n",
+        "\n",
+        "print(\"Array:\", arr)\n",
+        "\n",
+        "\n",
+        "print(\"Even numbers:\", arr[arr % 2 == 0])\n",
+        "\n",
+        "print(\"Odd numbers:\", arr[arr % 2 != 0])\n",
+        "\n",
+        "mean_val = arr.mean()\n",
+        "print(\"Mean:\", mean_val)\n",
+        "\n",
+        "\n",
+        "print(\"Standard deviation:\", arr.std())\n",
+        "\n",
+        "print(\"Greater than mean:\", arr[arr > mean_val])\n",
+        "\n",
+        "\n",
+        "print(\"Descending sorted:\", np.sort(arr)[::-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y-gAhyYsrpr_",
+        "outputId": "62853c49-7584-4451-d77b-5264191ec720"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[20 84 39 56 26 56 82 22 84 88 89 95  9  6  3 90 79  3 76 97]\n",
+            "[20 84 56 26 56 82 22 84 88  6 90 76]\n",
+            "[39 89 95  9  3 79  3 97]\n",
+            "55.2\n",
+            "34.35054584719142\n",
+            "[84 56 56 82 84 88 89 95 90 79 76 97]\n",
+            "[20 84 39 56 26 56 82 22 84 88 89 95  9  6  3 90 79  3 76 97]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
